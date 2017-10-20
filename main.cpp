@@ -20,25 +20,29 @@ int main()
 
   cin >> col;
 
-  for (int i=0;i<row;i++)
+  if (row > 0 && col > 0)
   {
-    stars[i].resize(col);
 
-    for (int j=0;j<col;j++)
+    for (int i=0;i<row;i++)
     {
-      stars[i][j]='*';
-    }
-  }
+      stars[i].resize(col);
 
-  // print the matrix
-  for (int i=0;i<row;i++)
-  {
-    for (int j=0;j<col;j++)
-    {
-      cout << stars[i][j];
+      for (int j=0;j<col;j++)
+      {
+        stars[i][j]='*';
+      }
     }
 
-    cout << "\n";
+    // print the matrix
+    for (int i=0;i<row;i++)
+    {
+      for (int j=0;j<col;j++)
+      {
+        cout << stars[i][j];
+      }
+
+      cout << "\n";
+    }
   }
 
   return 0;
